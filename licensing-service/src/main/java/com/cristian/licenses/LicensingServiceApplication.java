@@ -10,12 +10,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-/*
- * the @EnableDiscoveryClient and @EnableFeignClients application aren’t needed
- * when using the Ribbon backed RestTemplate and can be removed.
+/**
+ * The @EnableDiscoveryClient annotation is the trigger 
+ * for Spring Cloud to enable the application to use 
+ * the DiscoveryClient and Ribbon libraries
+ *
  */
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients 
 @RefreshScope
 public class LicensingServiceApplication {
 
@@ -26,6 +28,13 @@ public class LicensingServiceApplication {
 	/*
 	 * The @LoadBalanced annotation tells Spring Cloud to create a
 	 * Ribbon backed RestTemplate class.
+	 * 
+	 * this Ribbon-aware RestTemplate class is used with the
+	 * OrganizationRestTemplateClient class
+	 * 
+	 * the @EnableDiscoveryClient
+	 * and @EnableFeignClients application aren’t needed 
+	 * when using the Ribbon backed RestTemplate
 	 */
 	@LoadBalanced
 	@Bean
