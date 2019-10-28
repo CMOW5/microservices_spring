@@ -1,3 +1,9 @@
+// config server
+http://localhost:8888/licensingservice/default
+
+// config server
+http://localhost:8888/organizationservice/default
+
 // eureka server
 http://localhost:8761 
 
