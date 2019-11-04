@@ -16,3 +16,6 @@ http://localhost:8001/v1/organizations/442adb6e-fa58-47f3-9ca2-ed1fecdfe86c
 // licensing service without eureka url
 http://localhost:8000/v1/organizations/442adb6e-fa58-47f3-9ca2-ed1fecdfe86c/licenses/08dbe05-606e-4dad-9d33-90ef10e334f9
 
+// licensing service with zuul
+http://localhost:5555/api/licensing/v1/organizations/442adb6e-fa58-47f3-9ca2-ed1fecdfe86c/licenses/08dbe05-606e-4dad-9d33-90ef10e334f9
+
